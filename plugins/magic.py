@@ -6,10 +6,10 @@ from PIL import Image, ImageOps
 from userge import userge, Message, Config
 from userge.utils import progress, take_screen_shot, runcmd
 
-@userge.on_cmd("(invert|mirror|flip)$", about={
+@userge.on_cmd("(invert|mir|flip)$", about={
     'header': "Invert, Mirror or Flip any media",
     'usage': "{tr}invert [reply to any media]\n"
-             "{tr}mirror [reply to any media]\n"
+             "{tr}mir [reply to any media]\n"
              "{tr}flip [reply to any media]"}, name="transform")
 async def transform(message: Message):
     replied = message.reply_to_message
@@ -94,7 +94,7 @@ async def transform_media(image_path, transform_choice):
     return webp_file
 
 """Rotate any media"""
-@userge.on_cmd("rotate", about={
+@userge.on_cmd("rot", about={
     'header': "Rotate any media",
     'usage': "{tr}rotate [angle to rotate] [reply to media]\n" 
              "angle = 0 to 360(default is 90)"})
