@@ -24,7 +24,6 @@ CLOG = userge.getCLogger(__name__)
 
 # Default templates for Query Formatting
 ANIME_TEMPLATE = """[{c_flag}]**{romaji}**
-
 **ID | MAL ID:** `{idm}` | `{idmal}`
 **SOURCE:** `{source}`
 🆎 **TYPE:** `{formats}`
@@ -527,7 +526,6 @@ async def character_search(message: Message):
     (`{name}`)
 **ID:** {id_}
 [About Character]({url_})
-
 [Visit Website]({site_url})"""
 
     await message.reply_photo(img, caption=cap_text)
